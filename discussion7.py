@@ -29,21 +29,12 @@ def load_listings(f):
 ##### TASK 2: CALCULATION FUNCTION (single calculation)
 ###############################################################################
 def calculate_avg_price_by_neighbourhood_group_and_room(listings):
-    """
-    Calculate the average nightly price for each (neighbourhood_group, room_type) pair.
+    totals = {}   
+    counts = {}   
 
-    Parameters:
-        listings : list of dictionaries
-            - Keys (str): Column names from the CSV header 
-            (e.g., 'id', 'name', 'host_id', 'neighbourhood', 'price', etc.)
-            - Values (str): Corresponding values from that row
-            (NOTE: All values are strings, including numbers, which means you will need to convert them in this function)
-
-    Returns:
-        dict mapping (neighbourhood_group, room_type) -> average_price (float)
-        e.g. { ('Downtown', 'Entire home/apt'): 123.45, ... }
-    """
-    pass
+    for listing in listings:
+        neighbourhood_group = listing['neighbourhood_group']
+        room_type = listing['room_type']
 
 
 
